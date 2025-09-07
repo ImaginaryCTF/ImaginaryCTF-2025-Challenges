@@ -1,0 +1,11 @@
+name: leaky-rsa
+category: Crypto
+author: wjaaaaaaat
+description: |
+    A few of my bits are leaky... but they're not important. That's why they're called the least significant!
+
+    `nc leaky-rsa.chal.imaginaryctf.org 1337`
+flag: ictf{p13cin9_7h3_b1t5_t0g37her_3f0068c1b9be2547ada52a8020420fb0}
+distribution:
+  - chall.py
+deploy: "kctf"

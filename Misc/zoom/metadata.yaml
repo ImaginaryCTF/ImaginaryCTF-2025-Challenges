@@ -1,0 +1,11 @@
+name: zoom
+category: Misc
+author: Eth007
+description: |
+    Where in the world is the red dot?
+
+    Format: `ictf{lat,long}` rounded to three decimal places. example: `ictf{12.345,-67.890}`
+flag: ictf{45.282,-75.795}
+distribution:
+    - beavertail.png
+deploy: "none"

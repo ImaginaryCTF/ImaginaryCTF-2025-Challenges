@@ -1,0 +1,28 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: passwordless
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+    ports:
+      - protocol: TCP
+        port: 80
+        targetPort: 3000
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/passwordless-healthcheck:d55ae050f0c68fd7ca923156331081a8760ae93cac13c75c486a230474dbc653
+  podTemplate:
+    template:
+      spec:
+        containers:
+          - name: challenge
+            env:
+              - name: FLAG
+                valueFrom:
+                  secretKeyRef:
+                    name: flags
+                    key: passwordless
+  image: us.gcr.io/imaginaryctf/passwordless-challenge:b603308bc46b222f4123a68fa06fce5e4980b3347a8818fa89d7285210261063

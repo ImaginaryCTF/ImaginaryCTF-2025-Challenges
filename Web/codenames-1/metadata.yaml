@@ -1,0 +1,11 @@
+name: codenames-1
+category: Web
+author: Eth007
+description: |
+    I hear that multilingual codenames is all the rage these days. Flag is in `/flag.txt`.
+
+    http://codenames.chal.imaginaryctf.org
+flag: ictf{common_os_path_join_L_b19d35ca}
+distribution:
+  - codenames.zip
+deploy: "kctf"

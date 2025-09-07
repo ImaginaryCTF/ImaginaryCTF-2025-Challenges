@@ -1,0 +1,9 @@
+name: questionably-distributed
+category: Reversing
+author: Minerva-007.
+description: |
+    Distributed computing is the new tech on the horizon, so I decided to distribute the computer itself. Enjoy this horrendous simulation of a CPU running locally over TCP.
+flag: ictf{51ngl3_4PP_mul71pl3_53rv1c35}
+distribution:
+  - chal.exe
+deploy: "none"

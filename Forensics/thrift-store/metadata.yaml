@@ -1,0 +1,11 @@
+name: thrift-store
+category: Forensics
+author: Ciaran
+description: |
+  The frontend has gone down but the store is still open, can you buy the flag?
+
+  `thrift-store.chal.imaginaryctf.org:9090`
+flag: ictf{l1k3_gRPC_bUt_l3ss_g0ogly}
+distribution:
+  - capture.pcap
+deploy: "kctf"

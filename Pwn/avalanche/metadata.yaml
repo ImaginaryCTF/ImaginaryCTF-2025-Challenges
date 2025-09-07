@@ -1,0 +1,11 @@
+name: avalanche
+category: Pwn
+author: moaiman
+description: |
+    I don't trust stl containers so I wrote my own hash table ... I sure hope it's bug free
+
+    `nc avalanche.chal.imaginaryctf.org 1337`
+flag: ictf{br0k3n_l1n34r_pr0b1n6+p4713nc3->574ck_4v4l4nch3+l337_fl465_|(=_=)|_C#9S/xokWp5%}
+distribution:
+  - Avalanche
+deploy: "kctf"

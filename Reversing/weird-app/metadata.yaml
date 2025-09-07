@@ -1,0 +1,9 @@
+name: weird-app
+category: Reversing
+author: cleverbear57
+description: |
+    I made this weird android app, but all it gave me was this .apk file. Can you get the flag from it?
+flag: ictf{1_l0v3_@ndr0id_stud103}
+distribution:
+  - weird.zip
+deploy: "none"

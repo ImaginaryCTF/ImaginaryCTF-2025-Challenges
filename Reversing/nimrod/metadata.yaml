@@ -1,0 +1,9 @@
+name: nimrod
+category: Reversing
+author: Eth007
+description: |
+    And Cush begat Nimrod: he began to be a mighty one in the earth.
+flag: ictf{a_mighty_hunter_bfc16cce9dc8}
+distribution:
+  - nimrod
+deploy: "none"

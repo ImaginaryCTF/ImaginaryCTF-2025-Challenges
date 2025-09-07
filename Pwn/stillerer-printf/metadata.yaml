@@ -1,0 +1,11 @@
+name: stillerer-printf
+category: Pwn
+author: Eth007
+description: |
+    You had [still-printf](https://blog.redrocket.club/2020/12/23/HXPCTF-Still_Printf/) and [stiller-printf](https://eth007.me/blog/posts/stiller-printf/); how consistent can you get?
+
+    `nc stillerer-printf.chal.imaginaryctf.org 1337`
+flag: ictf{never_can_get_still_enough_bf1d441aa309}
+distribution:
+  - stillerer-printf.zip
+deploy: "kctf"

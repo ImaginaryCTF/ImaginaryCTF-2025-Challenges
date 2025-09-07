@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Welcome to Pwn!</title>
+<style>
+  body { font-family: "Segoe UI", sans-serif; background-color: #1e1e2f; color: #f0f0f0; margin:0; padding:0; }
+  header { background-color: #2a2a40; padding: 2rem; text-align: center; }
+  header h1 { margin:0; font-size: 3rem; color: #ff5555; }
+  main { padding: 2rem; }
+  section { margin-bottom: 2rem; background-color: #2a2a40; padding: 1rem; border-radius: 10px; }
+  h2 { color: #50fa7b; }
+  p { line-height: 1.5; }
+  ul { margin-left: 1.5rem; }
+  code { background-color: #444466; padding: 2px 4px; border-radius: 3px; }
+  footer { text-align:center; padding:1rem; background-color:#2a2a40; color:#888; }
+  form { margin-top: 2rem; text-align: center; }
+  input[type="text"] { padding: 0.5rem; width: 300px; border-radius: 5px; border: none; }
+  button { padding: 0.5rem 1rem; border: none; border-radius: 5px; background-color: #ff5555; color: white; cursor: pointer; }
+  button:hover { background-color: #ff7777; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Welcome to Pwn!</h1>
+  <p>Learn the art of exploitation and memory hacking.</p>
+</header>
+<main>
+
+<section>
+  <h2>Buffer Overflows</h2>
+  <p>Classic exploits where you overwrite memory to hijack execution flow. Often used to:</p>
+  <ul>
+    <li>Overwrite <code>return addresses</code> on the stack</li>
+    <li>Execute shellcode</li>
+    <li>Gain arbitrary code execution</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Format String Exploits</h2>
+  <p>Occur when <code>printf</code> and friends are misused. Attackers can:</p>
+  <ul>
+    <li>Read arbitrary memory</li>
+    <li>Write to arbitrary memory locations</li>
+    <li>Escalate privileges or leak secrets</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Use-After-Free & Heap Exploits</h2>
+  <p>Memory management bugs on the heap can allow attackers to:</p>
+  <ul>
+    <li>Corrupt data structures</li>
+    <li>Overwrite function pointers</li>
+    <li>Trigger arbitrary code execution</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Return-Oriented Programming (ROP)</h2>
+  <p>Advanced technique to bypass <code>NX/DEP</code> protections. Attackers chain "gadgets" to:</p>
+  <ul>
+    <li>Call system functions</li>
+    <li>Manipulate memory</li>
+    <li>Gain full control of the program</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Exploitation Tips</h2>
+  <ul>
+    <li>Always analyze the binary with <code>gdb</code> or <code>pwndbg</code></li>
+    <li>Understand the calling conventions and memory layout</li>
+    <li>Practice on CTF-style challenges</li>
+    <li>Read write-ups and learn from them</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Report a URL to Admin</h2>
+  <form id="reportForm">
+    <input type="text" id="urlInput" placeholder="Enter URL..." required>
+    <button type="submit">Report</button>
+  </form>
+  <p id="status"></p>
+</section>
+
+</main>
+
+<script>
+document.getElementById("reportForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const url = document.getElementById("urlInput").value;
+  document.getElementById("status").innerText = "Sending to admin...";
+
+  try {
+    const res = await fetch("/visit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "X-Target": url
+      },
+      body: "url=" + encodeURIComponent(url)
+    });
+    const text = await res.text();
+    document.getElementById("status").innerText = "Admin bot visited! Response length: " + text.length;
+  } catch (err) {
+    document.getElementById("status").innerText = "Error: " + err;
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+name: tax-return
+category: Misc
+author: cleverbear57
+description: |
+    Here is a helpful ai tax return assistant. When I made it, I put a super secret flag into the system prompt. You will never find it!
+    http://tax-return.chal.imaginaryctf.org
+flag: ictf{h0w_d1d_y0u_tr1ck_my_a1_@ss1st@nt?}
+distribution: []
+deploy: "kctf"

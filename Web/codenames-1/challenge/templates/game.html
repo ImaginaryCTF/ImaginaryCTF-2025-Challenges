@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="pure-g" style="margin:20px;">
+  <div class="pure-u-1" style="margin-bottom:1em;">
+    <h1>Codenames</h1>
+    <p>Logged in as: {{ username }}</p>
+  </div>
+  <div class="pure-u-1" id="waiting" style="margin-bottom:1em;">
+    <p>Waiting for opponent to join. Share code: <strong id="share-code">{{ code }}</strong></p>
+    <form action="{{ url_for('add_bot') }}" method="post" style="margin-top:0.5em;">
+      <input type="hidden" name="code" value="{{ code }}">
+      <button type="submit" class="pure-button pure-button-primary">Add Bot</button>
+    </form>
+  </div>
+  <div class="pure-u-1" id="score" style="display:none; margin-bottom:1em;">
+    Score: <span id="score_val">0</span>
+  </div>
+  <div class="pure-u-1 pure-u-md-1-2" id="your_color" style="display:none; margin-bottom:1em;">
+    Your Team: <span id="team_color_val"></span>
+    <span id="hard_mode_label" style="display:none; color:#c00; margin-left:1em; font-weight:bold;">Hard Mode</span>
+  </div>
+  <div class="pure-u-1 pure-u-md-1-2" id="clue_input" style="display:none; margin-bottom:1em;">
+    <form class="pure-form">
+      <input id="clue_word" type="text" placeholder="Clue" style="width:200px; margin-right:0.5em;">
+      <input id="clue_num" type="number" min="1" placeholder="Number" style="width:4em; margin-right:0.5em;">
+      <button type="button" id="send_clue" class="pure-button pure-button-primary">Send Clue</button>
+    </form>
+  </div>
+  <div class="pure-u-1" id="clue_display" style="display:none; margin-bottom:1em;">
+    Clue: <span id="clue_text"></span> — Guesses Remaining: <span id="guesses_val"></span>
+  </div>
+  <div class="pure-u-1">
+    <table id="board" class="pure-table pure-table-bordered pure-table-striped" style="display:none;"></table>
+  </div>
+  </div>
+  <script>
+  var code = '{{ code }}';
+  var username = '{{ username }}';
+  var player_index = {{ player_idx }};
+
+  // Copy game code to clipboard when clicked
+  document.addEventListener('DOMContentLoaded', function() {
+    var share = document.getElementById('share-code');
+    if (share) {
+      share.style.cursor = 'pointer';
+      share.title = 'Click to copy game code';
+      share.addEventListener('click', function() {
+        navigator.clipboard.writeText(share.innerText).then(function() {
+          alert('Game code ' + share.innerText + ' copied to clipboard.');
+        }).catch(function(err) {
+          console.error('Failed to copy game code: ', err);
+        });
+      });
+    }
+  });
+  </script>
+{% endblock %}

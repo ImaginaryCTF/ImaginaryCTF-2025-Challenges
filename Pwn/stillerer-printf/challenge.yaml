@@ -1,0 +1,13 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: stillerer-printf
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/stillerer-printf-healthcheck:93e749469419abf6712ee7a1d2c7865a4316cdccbdc251335f699a0b9a20c0ec
+  image: us.gcr.io/imaginaryctf/stillerer-printf-challenge:ed895b8f3d91ba1aa05e0756527573cac704cd1891d8fdd5ee4329a416d7c90d

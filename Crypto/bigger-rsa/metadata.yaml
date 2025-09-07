@@ -1,0 +1,9 @@
+name: bigger-rsa
+category: Crypto
+author: Moaiman
+description: |
+    Is 300 kb enough to make RSA a good candidate for PQC ... well maybe not but it's still got a smaller key size than McEliece 
+flag: ictf{rsa_lattices_and_crt_in_1_challenge_surely_has_real_world_applications_lmao_8719617206370154061234128157781624678026841512064124}
+distribution:
+  - bigger-rsa.zip
+deploy: "none"

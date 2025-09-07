@@ -1,0 +1,10 @@
+name: comparing
+category: Reversing
+author: cleverbear57
+description: |
+    I put my flag into this program, but now I lost the flag. Here is the program, and the output. Could you use it to find the flag?
+flag: ictf{cu3st0m_c0mp@r@t0rs_1e8f9e}
+distribution:
+  - comparing.cpp
+  - output.txt
+deploy: "none"

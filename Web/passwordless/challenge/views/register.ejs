@@ -1,0 +1,14 @@
+<%- include('header', { title: 'Register' }) -%>
+
+  <form action="/user" method="POST" style="background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 300px;">
+    <h2 style="text-align: center; margin-top: 0px; margin-bottom: 20px;">Register</h2>
+
+    <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email:</label>
+    <input type="email" id="email" name="email" required style="box-sizing: border-box; width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+   
+    <button type="submit" style="box-sizing: border-box; width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px;">
+    Register
+    </button>  
+  </form>
+
+<%- include('footer') -%></form>

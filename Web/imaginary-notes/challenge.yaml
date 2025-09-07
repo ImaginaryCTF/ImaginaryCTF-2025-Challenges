@@ -1,0 +1,17 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: imaginary-notes
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+    ports:
+      - protocol: TCP
+        port: 80
+        targetPort: 3000
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/imaginary-notes-healthcheck:38ebea98dace7f3885ef2acf6a6c929e0091274f5877584198f34f4fbca4295d
+  image: us.gcr.io/imaginaryctf/imaginary-notes-challenge:15f1401bd8ecd0b6a35eaaae7782f3b50428262c3a078ad68e2bb510238be7e5

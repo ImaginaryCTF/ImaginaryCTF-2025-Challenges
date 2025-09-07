@@ -1,0 +1,10 @@
+name: sanity-check
+category: Misc
+author: Eth007
+description: |
+    Welcome to ImaginaryCTF 2025!
+
+    `ictf{this_ctf_might_make_you_insane}`
+flag: ictf{this_ctf_might_make_you_insane}
+distribution: []
+deploy: "none"

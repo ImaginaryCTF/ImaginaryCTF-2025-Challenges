@@ -1,0 +1,24 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: avalanche
+spec:
+  deployed: true
+  powDifficultySeconds: 2
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/avalanche-healthcheck:4b840bd244e400ec9733258d94cae02a93a37f2e1f4e97b1d300a396d2139d0c
+  network:
+    public: true
+  podTemplate:
+    template:
+      spec:
+        containers:
+          - name: challenge
+            env:
+              - name: FLAG
+                valueFrom:
+                  secretKeyRef:
+                    name: flags
+                    key: avalanche
+  image: us.gcr.io/imaginaryctf/avalanche-challenge:3494df9fe6bfb8f95c222fa0ff7b544c79640127d624c0557ac829eb627bb4e4

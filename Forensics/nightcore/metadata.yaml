@@ -1,0 +1,11 @@
+name: nightcore
+category: Forensics
+author: Minerva-007.
+description: |
+    Squidward made an important internet announcement at some point in history. Can you find out the timestamp for when he said that? The flag format is `ictf{12345678}` where `12345678` is the POSIX timestamp. By the way, Bikini Bottoms run at 50Hz mains.
+
+flag: ictf{1731129200}
+
+distribution:
+  - nightcore.mp3
+deploy: "none"

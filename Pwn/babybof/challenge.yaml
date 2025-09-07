@@ -1,0 +1,13 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: babybof
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/babybof-healthcheck:d7be8cdd4bd83f8517e63b2a320e58379fe9cac1dc1d85c24fb05263c016349b
+  image: us.gcr.io/imaginaryctf/babybof-challenge:8d0ae88a0acee1227e0542d2a92ec201188923f5c873bc6ee4e47126e9f4eeb3

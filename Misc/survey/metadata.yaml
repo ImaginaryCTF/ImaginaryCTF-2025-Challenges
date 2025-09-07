@@ -1,0 +1,8 @@
+name: survey
+category: Misc
+author: Eth007
+description: |
+    Give us feedback for the CTF here! Thanks so much for playing!
+flag: ictf{thanks_for_playing_imaginaryctf_2025!}
+distribution: []
+deploy: "none"

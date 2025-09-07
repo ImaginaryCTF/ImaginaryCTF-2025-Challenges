@@ -1,0 +1,13 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: multiplication
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/multiplication-healthcheck:4154f5d421cc88443d714f95364ea7fc010425e2e0acdd0db0d6e6da254685b8
+  image: us.gcr.io/imaginaryctf/multiplication-challenge:94283b1705a8d7fa402b50cb5540e2c442beac06205970b59de40fb1a67c6df6

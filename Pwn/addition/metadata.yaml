@@ -1,0 +1,11 @@
+name: addition
+category: Pwn
+author: Eth007
+description: |
+    i love addition
+
+    `nc addition.chal.imaginaryctf.org 1337`
+flag: ictf{i_love_finding_offsets_4fd29170cb90}
+distribution:
+  - addition.zip
+deploy: "kctf"

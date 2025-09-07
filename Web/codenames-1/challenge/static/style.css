@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+}
+table {
+  border-collapse: collapse;
+}
+.cell {
+  border: 1px solid #555;
+  padding: 5px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+.flashes {
+  color: red;
+  list-style-type: none;
+}
+/* Subtle styling for lobby language selector */
+.subtle-language {
+  font-size: 0.9em;
+  color: #666;
+}
+select.subtle-language {
+  max-width: 150px;
+  margin-bottom: 0.2em;
+}

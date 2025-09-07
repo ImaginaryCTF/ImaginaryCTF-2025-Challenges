@@ -1,0 +1,13 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: fiumicino
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/fiumicino-healthcheck:95600e7090d049ed7cb88475416bfb3ce7a5dd5045dca5303e1326ed7e92d9d2
+  image: us.gcr.io/imaginaryctf/fiumicino-challenge:fedc5aeb73885b5062271a1917533b6c00f529ed586f7e88c9a71bc8483ffb91

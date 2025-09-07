@@ -1,0 +1,13 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: zkpow
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  healthcheck:
+    enabled: false
+    image: us.gcr.io/imaginaryctf/zkpow-healthcheck:f2ca4e0fa5b54ebae790ea88aa0ab8f44c4fe0ec96e5909f950ebfb1d2421e5a
+  network:
+    public: true
+  image: us.gcr.io/imaginaryctf/zkpow-challenge:ac9a5d989a97463c0841902f509354225bd687412ead4b7a033306211562a93f

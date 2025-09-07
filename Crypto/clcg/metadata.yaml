@@ -1,0 +1,9 @@
+name: clcg
+category: Crypto
+author: wjaaaaaaat
+description: |
+    Like a bundle of sticks, a bundle of LCGs is stronger together... right?
+flag: ictf{y3t_an07h3r_lcg_ch411_7b24ac314588057bfd4b70b10585a277}
+distribution:
+  - clcg.zip
+deploy: "none"

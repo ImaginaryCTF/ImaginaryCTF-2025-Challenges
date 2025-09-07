@@ -1,0 +1,11 @@
+name: fiumicino
+category: Pwn
+author: Eth007
+description: |
+    all roads lead to rome, they say
+
+    `nc fiumicino.chal.imaginaryctf.org 1337`
+flag: ictf{no_place_like_rome_e4c2cd1b}
+distribution:
+  - fiumicino.zip
+deploy: "kctf"

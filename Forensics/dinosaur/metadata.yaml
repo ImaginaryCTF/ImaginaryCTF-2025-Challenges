@@ -1,0 +1,9 @@
+name: dinosaur
+category: Forensics
+author: Moaiman
+description: |
+    Everyone has a favorite dinosaur, can you guess mine?
+flag: ictf{get_baited_its_actually_an_ankylosaurus}
+distribution:
+  - STEGosaurus.txt
+deploy: "none"

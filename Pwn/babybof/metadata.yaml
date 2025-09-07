@@ -1,0 +1,11 @@
+name: babybof
+category: Pwn
+author: Eth007
+description: |
+    welcome to pwn! hopefully you can do your first buffer overflow
+
+    `nc babybof.chal.imaginaryctf.org 1337`
+flag: ictf{arent_challenges_written_two_hours_before_ctf_amazing}
+distribution:
+  - vuln
+deploy: "kctf"

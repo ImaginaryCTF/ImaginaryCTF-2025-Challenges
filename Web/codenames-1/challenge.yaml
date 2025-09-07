@@ -1,0 +1,17 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: codenames
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+    ports:
+      - protocol: TCP
+        port: 80
+        targetPort: 5000
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/codenames-healthcheck:7298c1236752384e0f2046146c25e2b5f72800c9c8cd285e062ae16bff3f062e
+  image: us.gcr.io/imaginaryctf/codenames-challenge:c72be514992a4419d3c13cda98f27d98451b615749d0bbae42e9b8f796ad7498

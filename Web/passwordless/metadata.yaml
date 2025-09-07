@@ -1,0 +1,11 @@
+name: passwordless
+category: Web
+author: Ciaran
+description: |
+    Didn't have time to implement the email sending feature but that's ok, the site is 100% secure if nobody knows their password to sign in!
+
+    http://passwordless.chal.imaginaryctf.org
+flag: ictf{8ee2ebc4085927c0dc85f07303354a05}
+distribution:
+  - passwordless.zip
+deploy: "kctf"

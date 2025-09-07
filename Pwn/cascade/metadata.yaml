@@ -1,0 +1,11 @@
+name: cascade
+category: Pwn
+author: c-bass
+description: |
+    just a buffer overflow, right?
+
+    `nc cascade.chal.imaginaryctf.org 1337`
+flag: ictf{i_h0pe_y0u_didnt_use_ret2dl_94b51175}
+distribution:
+  - cascade.zip
+deploy: "kctf"

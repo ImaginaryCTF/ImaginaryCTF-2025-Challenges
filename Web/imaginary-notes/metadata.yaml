@@ -1,0 +1,9 @@
+name: imaginary-notes
+category: Web
+author: cleverbear57
+description: |
+    I made a new note taking app using Supabase! Its so secure, I put my flag as the password to the "admin" account. I even put my anonymous key somewhere in the site. The password database is called, "users".
+    http://imaginarynotes.chal.imaginaryctf.org
+flag: ictf{why_d1d_1_g1v3_u_my_@p1_k3y???}
+distribution: []
+deploy: "kctf"

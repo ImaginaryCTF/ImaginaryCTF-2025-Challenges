@@ -1,0 +1,28 @@
+<%- include('header', { title: 'Login' }) -%>
+
+<div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f0f2f5;">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: 300px;">
+
+    <form action="/session" method="POST" style="background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 100%;">
+      <h2 style="text-align: center; margin-top: 0px; margin-bottom: 20px;">Login</h2>
+
+      <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email:</label>
+      <input type="email" id="email" name="email" required style="box-sizing: border-box; width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+      
+      <label for="password" style="display: block; margin-bottom: 5px; font-weight: bold;">Password:</label>
+      <input type="password" id="password" name="password" required style="box-sizing: border-box; width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
+
+      <button type="submit" style="box-sizing: border-box; width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px;">
+        Login
+      </button>  
+    </form>
+
+    <div style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.04); width: 100%; text-align: center;">
+      <p style="margin: 0; font-size: 14px; color: #555;">Don't have an account?</p>
+      <a href="/register" style="display: inline-block; margin-top: 10px; color: #007BFF; text-decoration: none; font-weight: bold;">Create one here</a>
+    </div>
+
+  </div>
+</div>
+
+<%- include('footer') -%></form>

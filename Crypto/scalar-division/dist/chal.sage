@@ -1,0 +1,1 @@
+assert ((E:=EllipticCurve(GF(0xbde3c425157a83cbe69cee172d27e2ef9c1bd754ff052d4e7e6a26074efcea673eab9438dc45e0786c4ea54a89f9079ddb21),[5,7])).order().factor(limit=2**10)[3][0]*E.lift_x(ZZ(int.from_bytes((flag:=input('ictf{')).encode())))).x() == 0x686be42f9c3f431296a928c288145a847364bb259c9f5738270d48a7fba035377cc23b27f69d6ae0fad76d745fab25d504d5 and not print('\033[53C\033[1A}')

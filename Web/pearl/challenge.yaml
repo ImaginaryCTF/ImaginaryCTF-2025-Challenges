@@ -1,0 +1,17 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: pearl
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+    ports:
+      - protocol: TCP
+        port: 80
+        targetPort: 8080
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/pearl-healthcheck:bdb815cacd6be3ee138ab96cecc4c8e47b682247431394675b4c9e20ff979094
+  image: us.gcr.io/imaginaryctf/pearl-challenge:0e02c5f2d7361d8f24282d60e8737cd318fe23de41b46a57cca0be68feed5365

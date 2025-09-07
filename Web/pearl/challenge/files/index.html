@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pearl Elegance Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #4b0082;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .product {
+      background: #fff;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 16px;
+      width: 220px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: translateY(-4px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+
+    .product p {
+      margin: 0 0 10px;
+      font-size: 14px;
+    }
+
+    .product button {
+      background-color: #4b0082;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .product button:hover {
+      background-color: #5e1aa8;
+    }
+
+    .cart {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 6px;
+      width: 220px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .cart h2 {
+      margin-top: 0;
+    }
+
+    .cart ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 10px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .cart ul li {
+      padding: 5px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .total {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pearl Elegance</h1>
+    <p>Finest Pearls for Every Occasion</p>
+  </header>
+
+  <div class="products">
+    <div class="product">
+      <h3>Classic Pearl Necklace</h3>
+      <p>$120.00</p>
+      <button onclick="addToCart('Classic Pearl Necklace', 120)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <h3>Elegant Pearl Earrings</h3>
+      <p>$75.00</p>
+      <button onclick="addToCart('Elegant Pearl Earrings', 75)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <h3>Deluxe Pearl Bracelet</h3>
+      <p>$95.00</p>
+      <button onclick="addToCart('Deluxe Pearl Bracelet', 95)">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="cart" id="cart">
+    <h2>Cart</h2>
+    <ul id="cart-items"></ul>
+    <div class="total">Total: $<span id="cart-total">0.00</span></div>
+  </div>
+
+  <script>
+    let cartItems = [];
+    let total = 0;
+
+    function addToCart(name, price) {
+      cartItems.push({ name, price });
+      total += price;
+      renderCart();
+    }
+
+    function renderCart() {
+      const cartList = document.getElementById('cart-items');
+      const totalSpan = document.getElementById('cart-total');
+      cartList.innerHTML = '';
+      cartItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+        cartList.appendChild(li);
+      });
+      totalSpan.textContent = total.toFixed(2);
+    }
+  </script>
+</body>
+</html>

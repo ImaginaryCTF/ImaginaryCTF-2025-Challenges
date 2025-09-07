@@ -1,0 +1,10 @@
+name: obfuscated-2
+category: Forensics
+author: Eth007
+description: |
+    we can't fix it if we never face it
+
+    same handout as `obfuscated-1`
+flag: ictf{kpop_flag_hunters_1d392e1b}
+distribution: []
+deploy: "none"

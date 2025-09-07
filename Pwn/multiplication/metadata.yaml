@@ -1,0 +1,11 @@
+name: multiplication
+category: Pwn
+author: Eth007
+description: |
+    i hate multiplication
+
+    `nc multiplication.chal.imaginaryctf.org 1337`
+flag: ictf{p0w3r_0f_d0ubl1ng_fr_73e65974ce1f}
+distribution:
+  - multiplication.zip
+deploy: "kctf"

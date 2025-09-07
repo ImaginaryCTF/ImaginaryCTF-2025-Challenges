@@ -1,0 +1,24 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: feistier-network
+spec:
+  deployed: true
+  powDifficultySeconds: 2
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/feistier-network-healthcheck:cd65ae999d9e97fca462c81b7015bf9100ac58296d9aaec888cb54c0aa83dd15
+  network:
+    public: true
+  podTemplate:
+    template:
+      spec:
+        containers:
+          - name: challenge
+            env:
+              - name: FLAG
+                valueFrom:
+                  secretKeyRef:
+                    name: flags
+                    key: feistier-network
+  image: us.gcr.io/imaginaryctf/feistier-network-challenge:d3d2dbb92bfe7a654ece4f3b32c3ea4180832d23bfbf0592d8d8ccaf43925f7f

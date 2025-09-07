@@ -1,0 +1,24 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: leaky-rsa-revenge
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/leaky-rsa-revenge-healthcheck:a3708e78638d1b94458d525a928511b00d8827049e7768c5d3fb557e3c076d75
+  network:
+    public: true
+  podTemplate:
+    template:
+      spec:
+        containers:
+          - name: challenge
+            env:
+              - name: FLAG
+                valueFrom:
+                  secretKeyRef:
+                    name: flags
+                    key: leaky-rsa-revenge
+  image: us.gcr.io/imaginaryctf/leaky-rsa-revenge-challenge:427d60d3683635bfc130f5372ad73d5ff07505bd861ef7cff59be05aa3712ec0

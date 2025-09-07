@@ -1,0 +1,13 @@
+name: illegal
+category: Reversing
+author: Eth007
+description: |
+    My name is Pink and I'm really glad to meet you
+    You're recommended to me by some people
+
+    `nc illegal.chal.imaginaryctf.org 1337`
+flag: ictf{it_f33ls_ill3g4l_b19d491c}
+distribution:
+  - checker
+  - challenge.py
+deploy: "kctf"

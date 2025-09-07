@@ -1,0 +1,40 @@
+<input type="checkbox" id="dismiss" style="display: none" />
+
+<div
+  id="notification"
+  style="
+    background-color: <% if(type === 'Error') { %> #f8d7da <% } else { %> #d1e7dd <% } %>;
+    color: <% if(type === 'Error') { %> #842029 <% } else { %> #0f5132 <% } %>;
+    border: 1px solid  <% if(type === 'Error') { %> #f5c2c7 <% } else { %> #badbcc <% } %>;
+    padding: 15px 30px;
+    border-radius: 5px;
+    position: fixed;
+    top: 75px;
+    right: auto;
+    left: auto;
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  "
+>
+  <label
+    for="dismiss"
+    style="
+      padding-left: 5px;
+      position: absolute;
+      top: 2px;
+      right: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      color:  <% if(type === 'Error') { %> #842029 <% } else { %> #0f5132 <% } %>;
+      font-size: 18px;
+    "
+    >&times;</label
+  >
+  <strong><%= type %>:</strong> <%= message %>
+</div>
+
+<style>
+  #dismiss:checked ~ #notification {
+    display: none;
+  }
+</style>

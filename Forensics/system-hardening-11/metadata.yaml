@@ -1,0 +1,9 @@
+name: system-hardening-11
+category: Forensics
+author: shubunty, Prilasey
+description: |
+    Totoro's studio has recently been cracked, please help him with hardening his system. README: https://docs.google.com/document/d/1hW5BLLi1i3FN4SRWhx_7ZPefPjJhHNS2R2DLusmJKRI/edit?usp=sharing md5hash: `027ea651c15bd754f79de582ca9b8aa3`
+
+flag: ictf{t0t03ro_3s_c00l_1GdG90b3JvX2lzX3}
+distribution: []
+deploy: "none"

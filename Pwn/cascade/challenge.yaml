@@ -1,0 +1,13 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: cascade
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/cascade-healthcheck:7f4c7a3cf559bef7defd5a0ca1d7ae48b5a74f21fe838e8cb3f5480ad697b042
+  image: us.gcr.io/imaginaryctf/cascade-challenge:d3f0a8e16fc442eb082c5188c4c0d244a5bb3d66a19219500ba851077aa12c5d

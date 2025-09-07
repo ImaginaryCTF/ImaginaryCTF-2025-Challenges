@@ -1,0 +1,13 @@
+name: whoami
+category: Misc
+author: Eth007
+description: |
+    They can't leak what they don't know
+
+    Please don't test your payloads on remote; use your own OpenRouter key.
+
+    `nc whoami.chal.imaginaryctf.org 1337`
+flag: ictf{i_guess_u_uncovered_my_identity_b1f914a9}
+distribution:
+  - app.py
+deploy: "kctf"

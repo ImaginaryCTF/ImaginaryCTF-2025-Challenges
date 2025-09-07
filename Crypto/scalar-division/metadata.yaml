@@ -1,0 +1,9 @@
+name: scalar-division
+category: Crypto
+author: Water
+description: |
+    Scalar multiplication is reversible...right?
+flag: ictf{mayb3_d0nt_m4ke_th3_sca1ar_a_f4ctor_0f_the_ord3r}
+distribution:
+  - chal.sage
+deploy: "none"

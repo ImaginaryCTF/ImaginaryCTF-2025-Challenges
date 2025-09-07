@@ -1,0 +1,11 @@
+name: feistier-network
+category: Crypto
+author: moaiman
+description: |
+    I fixed my key generator this time, I'm so confident in it I'll even let you seed my rng
+
+    `nc feistier-network.chal.imaginaryctf.org 1337`
+flag: ictf{57r1n65_4r3_h45h3d_bu7_1n736r4l5_4r3n7_v3ry_c00l_cpy7h0n}
+distribution:
+  - chal.py
+deploy: "kctf"

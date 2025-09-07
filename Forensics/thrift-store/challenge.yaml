@@ -1,0 +1,17 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: thrift-store
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+    ports:
+      - protocol: TCP
+        port: 9090
+        targetPort: 9090
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/thrift-store-healthcheck:ee16715233046784a4ddc8913153a477bbda9b23060d367cb30f2dc670f265d3
+  image: us.gcr.io/imaginaryctf/thrift-store-challenge:d969be666d17da2cacb0603c77cea6ddf87c35e1effd8f19ed333ea09470e35b

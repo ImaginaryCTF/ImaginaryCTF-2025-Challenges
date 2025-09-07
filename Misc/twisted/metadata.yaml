@@ -1,0 +1,9 @@
+name: twisted
+category: Misc
+author: c-bass
+description: |
+  I lost my flag! Can you help me recover it?
+flag: ictf{qu4t3rn10n5_4r3_600d!!}
+distribution:
+  - twisted.zip
+deploy: "none"

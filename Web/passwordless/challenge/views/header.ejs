@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet" />
+  </head>
+  <body
+    style="
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f2f5;
+      margin: 0;
+    "
+  >
+    <nav
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #1e1e2f;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      "
+    >
+      <div style="display: flex; align-items: center; gap: 10px">
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="50"
+            cy="50"
+            r="45"
+            stroke="#00D8FF"
+            stroke-width="8"
+            fill="none"
+          />
+          <path
+            d="M20 80 C50 10, 50 10, 80 80"
+            stroke="#00D8FF"
+            stroke-width="6"
+            fill="none"
+          />
+          <circle cx="50" cy="50" r="6" fill="#00D8FF" />
+        </svg>
+        <div style="font-size: 20px; font-weight: bold; letter-spacing: 1px">
+          NebulaCore
+        </div>
+      </div>
+
+      <% if (user) { %>
+
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          color: white;
+          gap: 10px;
+          font-weight: 500;
+          margin-right: 50px;
+        "
+      >
+        <span>Hi, <span style="text-transform: capitalize; margin: 0px;"><%= user %></span>!</span>
+        <a
+          href="/logout"
+          style="
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid white;
+            padding: 6px 12px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+          "
+          onmouseover="this.style.backgroundColor='#333'"
+          onmouseout="this.style.backgroundColor='transparent'"
+        >
+          Log out
+        </a>
+      </div>
+      <% } else { %>
+      <a
+        href="/login"
+        style="
+          color: white;
+          text-decoration: none;
+          font-weight: 500;
+          border: 1px solid white;
+          padding: 6px 12px;
+          border-radius: 5px;
+          margin-right: 50px;
+          transition: background 0.3s ease;
+        "
+        onmouseover="this.style.backgroundColor='#333'"
+        onmouseout="this.style.backgroundColor='transparent'"
+      >
+        Login
+      </a>
+      <% } %>
+    </nav>
+    <%if (err) { %> 
+        <%- include('notification', { type: 'Error', message: err }) -%> 
+    <% } else if (msg) { %> 
+        <%- include('notification', { type: 'Success', message: msg }) -%> 
+    <% } %>
+

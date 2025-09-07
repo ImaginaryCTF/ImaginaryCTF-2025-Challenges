@@ -1,0 +1,9 @@
+name: obfuscated-1
+category: Forensics
+author: Eth007
+description: |
+    I installed every old software known to man... The flag is the VNC password, wrapped in `ictf{}`.
+flag: ictf{Slay4U!!}
+distribution:
+  - Users.zip
+deploy: "none"

@@ -1,0 +1,9 @@
+name: redacted
+category: Crypto
+author: Eth007
+description: |
+    wait, i thought XORing something with itself gives all 0s???
+flag: ictf{xor_is_bad_bad_encryption}
+distribution:
+  - redacted.png
+deploy: "none"

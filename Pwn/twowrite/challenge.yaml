@@ -1,0 +1,13 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: twowrite
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    enabled: true
+    image: "us.gcr.io/imaginaryctf/twowrite-healthcheck:665917b727741e3af7756a1b5d0e7fc7ef0ff9b335a928c508447549f7a06e73"
+  image: "us.gcr.io/imaginaryctf/twowrite-challenge:5e816878cd57ed04107814575e73a26e141f03cf5e2039e196529c5d709e29ef"

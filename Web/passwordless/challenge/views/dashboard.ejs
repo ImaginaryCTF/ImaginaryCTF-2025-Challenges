@@ -1,0 +1,44 @@
+<%- include('header', { title: 'Dashboard' }) -%>
+
+<style>
+  @keyframes pulseGlowLight {
+    0% {
+      box-shadow: 0 0 8px #00000033;
+    }
+    50% {
+      box-shadow: 0 0 20px #00000066;
+    }
+    100% {
+      box-shadow: 0 0 8px #00000033;
+    }
+  }
+</style>
+<div
+  style="
+    margin: 100px auto;
+    padding: 24px 40px;
+    background: linear-gradient(135deg, #ffffff, #e8ecf1);
+    color: #0a0a1a;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-align: center;
+    border-left: 8px solid #0a0a1a;
+    border-radius: 12px;
+    width: fit-content;
+    max-width: 90%;
+    animation: pulseGlowLight 2s infinite ease-in-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform: rotate(-0.5deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  "
+>
+  <span id="flag"><%- process.env.FLAG %></span>
+</div>
+
+<%- include('footer') -%>

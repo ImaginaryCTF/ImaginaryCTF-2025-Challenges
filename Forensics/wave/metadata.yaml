@@ -1,0 +1,9 @@
+name: wave
+category: Forensics
+author: Eth007
+description: |
+    not a steg challenge i promise
+flag: ictf{obligatory_metadata_challenge}
+distribution:
+  - wave.wav
+deploy: "none"

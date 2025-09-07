@@ -1,0 +1,24 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: leaky-rsa
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/leaky-rsa-healthcheck:a3708e78638d1b94458d525a928511b00d8827049e7768c5d3fb557e3c076d75
+  network:
+    public: true
+  podTemplate:
+    template:
+      spec:
+        containers:
+          - name: challenge
+            env:
+              - name: FLAG
+                valueFrom:
+                  secretKeyRef:
+                    name: flags
+                    key: leaky-rsa
+  image: us.gcr.io/imaginaryctf/leaky-rsa-challenge:2c4b0109e01430b4e207953f104e5ae352ca3b9057f3de6f49510721d8faf08b

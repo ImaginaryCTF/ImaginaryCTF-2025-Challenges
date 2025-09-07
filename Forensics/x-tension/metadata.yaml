@@ -1,0 +1,9 @@
+name: x-tension
+category: Forensics
+author: FIREPONY57
+description: |
+    Trying to get good at something while watching youtube isn't the greatest idea...
+flag: ictf{extensions_might_just_suck}
+distribution:
+  - chal.pcapng
+deploy: "none"

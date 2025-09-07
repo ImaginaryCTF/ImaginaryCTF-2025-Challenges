@@ -1,0 +1,11 @@
+name: twowrite
+category: Pwn
+author: Eth007
+description: |
+    double the writes from last year
+
+    `nc twowrite.chal.imaginaryctf.org 1337`
+flag: ictf{d0nt_y0u_l0ve_it_when_the_p0inters_demangle_themselves_77a90021e9a8a690}
+distribution:
+  - twowrite.zip
+deploy: "kctf"

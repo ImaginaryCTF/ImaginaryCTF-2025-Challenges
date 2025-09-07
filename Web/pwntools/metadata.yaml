@@ -1,0 +1,11 @@
+name: pwntools
+category: Web
+author: Eth007
+description: |
+    i love pwntools
+
+    [instancer]
+flag: ictf{oops_ig_my_webserver_is_just_ai_slop_b9f415ea}
+distribution:
+  - pwntools.zip
+deploy: "instancer"

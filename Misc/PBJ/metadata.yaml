@@ -1,0 +1,12 @@
+name: PBJ
+category: Misc
+author: NoobMaster
+description: |
+  The bot does all the trading, while I sit back and relax. Note: The two instancers are running the exact same thing, they are there to avoid overloading.
+
+  `nc 34.59.181.83 1337` OR `nc 34.45.211.133 1337`
+flag: ictf{n3v3r_7ru571ng_7h15_b0t_4g41n}
+distribution:
+  - Chall.sol
+
+deploy: "docker"

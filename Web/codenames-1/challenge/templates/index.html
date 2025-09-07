@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="pure-g" style="margin:20px;">
+  <div class="pure-u-1" style="max-width:800px; margin:auto;">
+    <h1>Codenames</h1>
+    <p>Play Codenames online! Our app supports multiple languages for maximum fun!</p>
+    <p>
+      <a href="{{ url_for('login') }}" class="pure-button pure-button-primary">Login</a>
+      <a href="{{ url_for('register') }}" class="pure-button">Register</a>
+    </p>
+  </div>
+</div>
+{% endblock %}

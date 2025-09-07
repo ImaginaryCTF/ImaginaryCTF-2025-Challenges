@@ -1,0 +1,5 @@
+Flask>=2.0
+Flask-SocketIO>=5.0
+eventlet>=0.30
+selenium>=4.0
+webdriver_manager==4.0.2

@@ -1,0 +1,13 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: illegal
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/illegal-healthcheck:cd1127e7c03609e55be887720de27f51326d90196d9f865dedeedd0b62b420cd
+  image: us.gcr.io/imaginaryctf/illegal-challenge:f5880ee15b6944a754f7c25b691b44e2fc1b60c1202bb600d4b8c2c5f2681856

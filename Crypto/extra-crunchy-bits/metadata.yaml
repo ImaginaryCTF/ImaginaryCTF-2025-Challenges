@@ -1,0 +1,12 @@
+name: extra-crunchy-bits
+category: Crypto
+author: puzzler7
+description: |
+    help they crunched my flag
+
+    Plaintext and flag are both in English.
+flag: ictf{asyourfavouritecryptographeryoucantrustmewhenisayyoushoulduseecbineverythings}
+distribution:
+  - ecb.py
+  - enc.bin
+deploy: "none"

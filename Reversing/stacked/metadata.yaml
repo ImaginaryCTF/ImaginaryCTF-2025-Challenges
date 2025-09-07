@@ -1,0 +1,9 @@
+name: stacked
+category: Reversing
+author: Minerva-007.
+description: |
+    Return oriented programming is one of the paradigms of all time. The garbled output is `94 7 d4 64 7 54 63 24 ad 98 45 72 35` hex.
+flag: ictf{1n54n3_5k1ll2}
+distribution:
+  - chal.out
+deploy: "none"

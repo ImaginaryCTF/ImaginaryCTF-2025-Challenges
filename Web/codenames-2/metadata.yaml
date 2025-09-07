@@ -1,0 +1,10 @@
+name: codenames-2
+category: Web
+author: Eth007
+description: |
+    Codenames is no fun when your teammate sucks... Flag is in the environment variable `FLAG_2`.
+
+    http://codenames.chal.imaginaryctf.org
+flag: ictf{insane_mind_reading_908f13ab}
+distribution: []
+deploy: "none"

@@ -1,0 +1,13 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: addition
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    enabled: true
+    image: us.gcr.io/imaginaryctf/addition-healthcheck:2f89b76dfebd8e7240e4e8d6b1fa1026d2d4ae108f2cd646b814cfe6cabb793b
+  image: us.gcr.io/imaginaryctf/addition-challenge:c7688c0368b3eb3b2a2bef1b2eac5754486bf0c554cd8bb60c96a6d72727be87

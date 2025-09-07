@@ -1,0 +1,11 @@
+name: zkpow
+category: Crypto
+author: Eth007
+description: |
+    i designed a new way to stop you from brute forcing my pwn challenges but you keep sending me too much data so i had to use crypto :(
+    
+    `nc zkpow.chal.imaginaryctf.org 1337`
+flag: ictf{zero_knowledge_proof_more_like_i_have_zero_knowledge_of_how_to_prove_this}
+distribution:
+  - zkpow.py
+deploy: "kctf"
